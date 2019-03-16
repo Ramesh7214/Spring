@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="dbDetails" class="com.gbn.test.DBDetails">
+		<property name="url" value="localhost:5214" />
+	</bean>
+
+	<bean id="userDetails" class="com.gbn.test.UserDetails" parent="dbDetails">
+		<property name="username" value="sys" />
+		<property name="password" value="admin" />
+	</bean>
+</beans>

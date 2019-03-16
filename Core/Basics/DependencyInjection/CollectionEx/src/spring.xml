@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="collectionEx" class="com.gbn.test.CollectionEx">
+      <property name = "names">
+         <list>
+            <value>RAM</value>
+            <value>RAJ</value>
+            <value>RAKI</value>
+         </list>
+      </property>
+      <property name = "things">
+         <set>
+            <value>car</value>
+            <value>bus</value>
+            <value>computer</value>
+         </set>
+      </property>
+      <property name = "cityCapitals">
+         <map>
+            <entry key = "INDIA" value = "DELHI"/>
+            <entry key = "AMERICA" value = "NEWYORK"/>
+         </map>
+      </property>
+      <property name = "dbDetails">
+         <props>
+            <prop key = "url">db url</prop>
+            <prop key = "password">db password</prop>
+            <prop key = "username">db username</prop>
+         </props>
+      </property>
+	</bean>
+</beans>

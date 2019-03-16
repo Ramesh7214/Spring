@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="circle" class="com.gbn.test.Circle" /> <!-- usefull some ther place -->
+
+	<bean id="shape" class="com.gbn.test.Shape">
+		<property name="circle" ref="circle" />
+		<property name="rectangle">
+			<bean  class="com.gbn.test.Rectangle" /> <!-- usefull only within shape class -->
+		</property>
+		<property name="triangle">
+			<bean class="com.gbn.test.Triangle" /> <!-- usefull only within shape class -->
+		</property>
+	</bean>
+	
+
+</beans>
